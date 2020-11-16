@@ -85,9 +85,6 @@ public class EduTeacherController {
             @ApiParam(name = "teacher",value = "讲师对象",required = true)
             @RequestBody EduTeacher eduTeacher
     ){
-        eduTeacher.setIsDeleted(false);
-        eduTeacher.setGmtCreate(new Date());
-        eduTeacher.setGmtModified(new Date());
         eduTeacherService.save(eduTeacher);
         return R.ok();
     }
